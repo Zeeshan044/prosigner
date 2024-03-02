@@ -14,6 +14,9 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        lg2: "20px",
+      },
       colors: {
         "secondary-dark": "#d21c5c",
         border: "hsl(var(--border) , <alpha-value>)",
