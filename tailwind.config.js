@@ -1,38 +1,67 @@
+import { fontFamily } from "tailwindcss/defaultTheme"
+
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+const config = {
+  darkMode: ["class"],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
+  safelist: ["dark"],
   theme: {
-    extend: {
-      animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
-      keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-        }
-      }
+    },
+    extend: {
+      colors: {
+        "secondary-dark": "#d21c5c",
+        border: "hsl(var(--border) , <alpha-value>)",
+        input: "hsl(var(--input) , <alpha-value>)",
+        ring: "hsl(var(--ring) , <alpha-value>)",
+        background: "hsl(var(--background) , <alpha-value>)",
+        foreground: "hsl(var(--foreground) , <alpha-value>)",
+        primary: {
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+          foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive) , <alpha-value>)",
+          foreground: "hsl(var(--destructive-foreground) , <alpha-value>)",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted) , <alpha-value>)",
+          foreground: "hsl(var(--muted-foreground) , <alpha-value>)",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent) , <alpha-value>)",
+          foreground: "hsl(var(--accent-foreground) , <alpha-value>)",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover) , <alpha-value>)",
+          foreground: "hsl(var(--popover-foreground) , <alpha-value>)",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card) , <alpha-value>)",
+          foreground: "hsl(var(--card-foreground) , <alpha-value>)",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: [...fontFamily.sans],
+        mulish: ["Mulish", ...fontFamily.sans],
+        geo: ["Geomanist", ...fontFamily.sans],
+      },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require("daisyui")
-  ],
-  daisyui: {
-    themes: [
-      {
-        saasstartertheme: {
-          "primary": "#180042",
-          "primary-content": "#fefbf6",
-          "neutral-content": "#fefbf6",
-          "secondary": "#c7b9f8",
-          "accent": "#db2777",
-          "neutral": "#180042",
-          "base-content": "#180042",
-          "base-100": "#fefbf6",
-        },
-      }
-    ],
-  }
 }
 
+export default config
