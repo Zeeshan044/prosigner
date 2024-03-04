@@ -1,24 +1,13 @@
 <script>
-  import Hero from "../../lib/components/layout/hero.svelte"
-  import PricingCards from "../../lib/components/layout/pricing-cards.svelte"
-  import ForIndividuals from "../../lib/components/layout/for-individuals.svelte"
-  import WhyUs from "../../lib/components/layout/why-us.svelte"
-  import FeaturesList from "../../lib/components/layout/features-list.svelte"
+  import Hero from "../../lib/components/pages/pricing/hero.svelte"
+  import Packages from "../../lib/components/pages/pricing/packages.svelte"
+  import ForIndividuals from "../../lib/components/pages/pricing/for-individuals.svelte"
+  import WhyUs from "../../lib/components/pages/pricing/why-us.svelte"
+  import FeaturesList from "../../lib/components/pages/pricing/features-list.svelte"
 </script>
 
-<!-- <section class="container mx-auto mt-12">
-  <h1 class="text-5xl font-bold text-center font-geo">
-    WiseStamp Plans and Pricing
-  </h1>
-  <p class="text-center mt-6 text-lg2">
-    Effortlessly create and manage your team’s email signatures.
-  </p>
-</section> -->
-
-<section>
-  <Hero />
-  <PricingCards />
-  <FeaturesList />
-  <ForIndividuals />
-  <WhyUs />
-</section>
+<Hero />
+<Packages />
+<FeaturesList />
+<ForIndividuals />
+<WhyUs />
