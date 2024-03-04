@@ -27,9 +27,7 @@
         </div>
       </label>
     </div>
-    <div
-      class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
-    >
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
       <PricingCard
         packageName="Basic"
         featurePrice="$1.5"
@@ -37,14 +35,16 @@
         description="Create professional and consistent signatures for your organization."
         featureList={PRICING_FEATURES_1}
       />
-      <PricingCard
-        packageName="Plus"
-        featurePrice="$1.8"
-        totalPrice="$270"
-        description="Get advanced features & analytics for your signatures."
-        featureList={PRICING_FEATURES_2}
-        recommended
-      />
+      <div class="mt-6 md:mt-0">
+        <PricingCard
+          packageName="Plus"
+          featurePrice="$1.8"
+          totalPrice="$270"
+          description="Get advanced features & analytics for your signatures."
+          featureList={PRICING_FEATURES_2}
+          recommended
+        />
+      </div>
       <PricingCard
         packageName="Enterprise"
         featurePrice="$1.8"

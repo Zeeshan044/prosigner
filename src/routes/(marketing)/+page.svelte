@@ -8,6 +8,8 @@
 
 <Hero />
 <Packages />
-<FeaturesList />
+<div class="hidden xl:block">
+  <FeaturesList />
+</div>
 <ForIndividuals />
 <WhyUs />

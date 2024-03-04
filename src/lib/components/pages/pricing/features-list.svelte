@@ -1,41 +1,34 @@
 <script>
+  import {
+    ADMIN_SECURITY,
+    CONTROL_EFFICIENCY,
+    ESSENTIAL_FEATURES,
+    PERFORMANCE,
+    SUPPORT,
+  } from "$lib/data/pricing/features"
   import { cn } from "$lib/utils"
-  import FeaturedTableTick from "../../ui/featured-table-tick.svelte"
+  import CheckCircle from "../../svg/check-circle.svelte"
 
-  // let rotated = false
   let hidden = true
 
   function toggleHidden() {
-    // const table = document.getElementById("features-table")
-    // rotated = !rotated
-    // // @ts-ignore
-    // if (table.classList.contains("hidden")) {
-    //   // @ts-ignore
-    //   table.classList.remove("hidden")
-    // } else {
-    //   // @ts-ignore
-    //   table.classList.add("hidden")
-    // }
-
     hidden = !hidden
   }
 </script>
 
-<section class="py-8">
+<section class="pb-8 pt-24">
   <div class="max-w-7xl px-12 mx-auto">
-    <div class="">
-      <div class="dropdown-trigger flex justify-center items-center gap-4">
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-        <h5 class="text-2xl font-bold cursor-pointer" on:click={toggleHidden}>
+    <div class="flex justify-center">
+      <button
+        on:click={toggleHidden}
+        class="flex justify-center items-center gap-4"
+      >
+        <h5 class="text-2xl font-bold cursor-pointer">
           Complete features list
         </h5>
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg
           width="18"
-          height="11"
-          on:click={toggleHidden}
+          height="18"
           viewBox="0 0 12 7"
           class="dropdown-trigger-icon transition-transform duration-300 ease-in-out cursor-pointer"
           style="transform: rotate({!hidden ? '180deg' : '0deg'})"
@@ -46,7 +39,7 @@
             fill="currentColor"
           ></path></svg
         >
-      </div>
+      </button>
     </div>
     <div class="mt-8">
       <table id="features-table" class={cn("w-full", hidden ? "hidden" : null)}>
@@ -71,141 +64,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Centrally managed</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Unlimited signature designs</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Pre-built signature templates</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Sync with your directory</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Instantly deploy signature updates</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Supports all devices</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Supports all email clients</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Flexible deployment options</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Legal disclaimers</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
+          {#each ESSENTIAL_FEATURES as feature}
+            <tr>
+              <th
+                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                >{feature.title}</th
+              >
+              <td class="w-1/4 p-4">
+                {#if feature?.basic}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.plus}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.enterprise}
+                  <CheckCircle />
+                {/if}
+              </td>
+            </tr>
+          {/each}
         </tbody>
 
         <thead>
@@ -229,131 +110,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Department specific signatures</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Signature data customization</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Employee signature portal</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >CRM support</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Custom directory sync</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Employee lifecycle automation</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Supports shared inbox</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Details editable by employee</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Multiple organizational domains</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
+          {#each CONTROL_EFFICIENCY as feature}
+            <tr>
+              <th
+                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                >{feature.title}</th
+              >
+              <td class="w-1/4 p-4">
+                {#if feature?.basic}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.plus}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.enterprise}
+                  <CheckCircle />
+                {/if}
+              </td>
+            </tr>
+          {/each}
         </tbody>
 
         <thead>
@@ -377,88 +156,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Specialized design elements</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Promotional banners</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Signature analytics</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Campaigns</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Multiple signatures per employee</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Signature rules like reply &amp; internal</th
-            >
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
+          {#each PERFORMANCE as feature}
+            <tr>
+              <th
+                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                >{feature.title}</th
+              >
+              <td class="w-1/4 p-4">
+                {#if feature?.basic}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.plus}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.enterprise}
+                  <CheckCircle />
+                {/if}
+              </td>
+            </tr>
+          {/each}
         </tbody>
 
         <thead>
@@ -482,61 +202,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Roles &amp; permissions</th
-            >
-            <td> </td>
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >SAML single sign-in</th
-            >
-            <td> </td>
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >User provisioning through SCIM</th
-            >
-            <td> </td>
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >External access control
-            </th>
-            <td> </td>
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Audit log</th
-            >
-            <td> </td>
-            <td> </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
+          {#each ADMIN_SECURITY as feature}
+            <tr>
+              <th
+                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                >{feature.title}</th
+              >
+              <td class="w-1/4 p-4">
+                {#if feature?.basic}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.plus}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.enterprise}
+                  <CheckCircle />
+                {/if}
+              </td>
+            </tr>
+          {/each}
         </tbody>
 
         <thead>
@@ -560,39 +248,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Email support</th
-            >
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-            <td class="w-1/4 p-4">
-              <FeaturedTableTick />
-            </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Dedicated onboarding specialist</th
-            >
-            <td> </td>
-            <td class=" text-center"> for 50+ seats </td>
-            <td class=" text-center"> for 50+ seats </td>
-          </tr>
-          <tr>
-            <th
-              class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
-              >Dedicated customer success manager</th
-            >
-            <td> </td>
-            <td> </td>
-            <td class=" text-center"> for 200+ seats </td>
-          </tr>
+          {#each SUPPORT as feature}
+            <tr>
+              <th
+                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                >{feature.title}</th
+              >
+              <td class="w-1/4 p-4">
+                {#if feature?.basic}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.plus}
+                  <CheckCircle />
+                {/if}
+              </td>
+              <td class="w-1/4 p-4">
+                {#if feature?.enterprise}
+                  <CheckCircle />
+                {/if}
+              </td>
+            </tr>
+          {/each}
         </tbody>
       </table>
     </div>

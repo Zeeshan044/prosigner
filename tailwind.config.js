@@ -16,6 +16,7 @@ const config = {
     extend: {
       fontSize: {
         lg2: "20px",
+        "2xl-2": "28px",
       },
       colors: {
         "secondary-dark": "#d21c5c",
