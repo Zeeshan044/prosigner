@@ -1,9 +1,24 @@
-<script>
+<script lang="ts">
+  import { fade } from "svelte/transition"
   import LogoLarge from "../svg/logo-large.svelte"
   import Button from "../ui/button/button.svelte"
+
+  import MegaMenu from "./mega-menu/mega-menu.svelte"
+
+  const MENU_ITEMS = ["Solutions", "Create", "Learn", "Company"]
+
+  let activeMenuItem: string | null = null
+
+  function handleMenuItemClick(value: string) {
+    if (activeMenuItem === value) {
+      activeMenuItem = null
+    } else {
+      activeMenuItem = value
+    }
+  }
 </script>
 
-<nav class="bg-white shadow-sm">
+<nav class="bg-white shadow-sm relative z-50">
   <div class="container mx-auto">
     <div class="flex items-center justify-between md:px-6 py-3 xl:py-0">
       <!-- Left side content -->
@@ -15,10 +30,11 @@
         <!-- Desktop menu -->
         <div class="items-center justify-between hidden xl:flex">
           <ul class="flex text-primary/90 gap-2">
-            {#each ["Solutions", "Create", "Learn", "Company"] as link}
+            {#each MENU_ITEMS as link}
               <li>
                 <a
                   href="/"
+                  on:click={() => handleMenuItemClick(link)}
                   class="py-7 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
                 >
                   <span>{link}</span>
@@ -97,4 +113,20 @@
       </button>
     </div>
   </div>
+  {#if activeMenuItem}
+    <div transition:fade>
+      <MegaMenu />
+    </div>
+  {/if}
 </nav>
+
+{#if activeMenuItem}
+  <!-- Backdrop blur -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div
+    transition:fade
+    on:click={() => (activeMenuItem = null)}
+    class="backdrop-blur-sm bg-black/55 fixed top-0 left-0 right-0 bottom-0 z-10"
+  ></div>
+{/if}
