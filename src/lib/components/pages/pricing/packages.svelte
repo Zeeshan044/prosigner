@@ -9,7 +9,7 @@
 </script>
 
 <section class="bg-white">
-  <div class="px-4 mx-auto max-w-7xl lg:px-12">
+  <div class="ws-container">
     <div class="my-12">
       <label for="" class=" flex">
         <span class="text-primary font-mulish py-1 font-semibold"

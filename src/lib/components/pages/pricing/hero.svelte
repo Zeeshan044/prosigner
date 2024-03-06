@@ -1,4 +1,4 @@
-<section class="mt-12">
+<section class="mt-12 ws-container">
   <div>
     <h1
       class="font-bold text-3xl xl:text-5xl text-center font-geo text-primary"

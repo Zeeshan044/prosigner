@@ -14,7 +14,7 @@
   import Similarweb from "$lib/assets/svg/similarweb.svg"
 </script>
 
-<section class="mt-24 max-w-7xl px-12 mx-auto font-geo">
+<section class="mt-24 ws-container font-geo">
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
     <div class="p-8 px-15">
       <p class="font-geo">
@@ -67,7 +67,7 @@
     <h3 class="text-center font-medium font-geo text-2xl-2">
       Trusted by +10K enterprises worldwide
     </h3>
-    <Marquee speed={30} class="pt-8">
+    <Marquee speed={30} class="pt-8" gap={"30px"}>
       <img class="w-24 md:w-auto" src={Bizzabo} alt="bizzabo" srcset="" />
       <img class="w-24 md:w-auto" src={Coldwell} alt="coldwell" srcset="" />
       <img class="w-24 md:w-auto" src={Corcoran} alt="corcoran" srcset="" />

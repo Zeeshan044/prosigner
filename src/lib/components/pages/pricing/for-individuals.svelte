@@ -2,7 +2,7 @@
   import PricingCardSolo from "../../ui/cards/pricing-card-solo.svelte"
 </script>
 
-<section class="py-5 w-full max-w-7xl mx-auto px-4 md:px-12 text-primary">
+<section class="py-5 ws-container text-primary">
   <div class="px-4">
     <div class="text-center">
       <h3 class="text-2xl font-semibold mb-2 mt-3 font-geo">For individuals</h3>

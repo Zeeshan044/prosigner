@@ -17,7 +17,7 @@
 </script>
 
 <section class="pb-8 pt-24">
-  <div class="max-w-7xl px-12 mx-auto">
+  <div class="ws-container">
     <div class="flex justify-center">
       <button
         on:click={toggleHidden}
