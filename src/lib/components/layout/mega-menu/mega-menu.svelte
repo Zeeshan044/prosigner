@@ -1,14 +1,18 @@
+<script lang="ts">
+  export let menu: any
+</script>
+
 <!-- Menu -->
 <div
   class="bg-[#f8f9fb] absolute top-full left-0 right-0 border-t border-[#f8f9fb]"
 >
-  <div class="container mx-auto grid grid-cols-4 gap-8">
+  <div class="container mx-auto grid grid-cols-4 gap-8 px-8">
     <div class="py-8">
       <h3 class="uppercase font-bold text-sm">Our Products</h3>
       <div class="flex flex-col mt-4 gap-4">
         <!-- Card -->
         <div
-          class="border group hover:border-secondary hover:shadow-lg rounded-lg shadow py-4 px-5 bg-white flex flex-col gap-4 duration-100"
+          class="border border-gray-300 group hover:border-secondary hover:shadow rounded-lg py-4 px-5 bg-white flex flex-col gap-4 duration-100"
         >
           <div class="flex items-center gap-2">
             <span>
@@ -42,7 +46,7 @@
         </div>
         <!-- Card -->
         <div
-          class="border group hover:border-secondary hover:shadow-lg rounded-lg shadow py-4 px-5 bg-white flex flex-col gap-4 duration-100"
+          class="border border-gray-300 group hover:border-secondary hover:shadow-lg rounded-lg py-4 px-5 bg-white flex flex-col gap-4 duration-100"
         >
           <div class="flex items-center gap-2">
             <span>
@@ -76,8 +80,35 @@
         </div>
       </div>
     </div>
-    <div class="bg-white rounded-s-lg col-span-3 flex place-content-center">
-      <h1>Working on it...</h1>
+    <div class="bg-white rounded-s-lg col-span-3 flex place-content-center p-8">
+      <div class="grid grid-cols-4 gap-8">
+        <div class="col-span-3 grid grid-cols-3 gap-8">
+          {#each menu as item}
+            <div>
+              <h3 class="uppercase font-bold text-sm">{item.title}</h3>
+              <ul class="flex flex-col gap-3 mt-4">
+                {#each item.items as link}
+                  <li class="hover:text-secondary duration-100 cursor-pointer">
+                    {link}
+                  </li>
+                {/each}
+              </ul>
+            </div>
+          {/each}
+        </div>
+        <div>
+          <h3 class="uppercase font-bold text-sm">User Stories</h3>
+          <img
+            src="https://www.wisestamp.com/wp-content/uploads/2023/09/menu-review-img.jpg"
+            alt=""
+            class="mt-4"
+          />
+          <p class="text-sm mt-2 ml-2">
+            See how companies save time & money automating their email
+            signatures
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

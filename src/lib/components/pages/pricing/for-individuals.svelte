@@ -5,7 +5,7 @@
 <section class="py-5 ws-container text-primary">
   <div class="px-4">
     <div class="text-center">
-      <h3 class="text-2xl font-semibold mb-2 mt-3 font-geo">For individuals</h3>
+      <h3 class="text-3xl font-medium mb-2 mt-3 font-geo">For individuals</h3>
       <p class="mb-4 text-lg font-mulish leading-snug">
         Turn your emails into powerful marketing tools with a professionally
         designed email signature.

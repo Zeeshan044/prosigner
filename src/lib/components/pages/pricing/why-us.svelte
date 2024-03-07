@@ -27,12 +27,12 @@
         />
       </p>
       <p
-        class="text-lg md:text-xl text-primary leading-1.5 text-center mt-3 mb-0 font-mulish"
+        class="text-lg text-primary leading-1.5 text-center mt-3 mb-0 font-mulish"
       >
         <strong>SSL SECURE PAYMENT</strong>
       </p>
       <p
-        class="md:text-xl leading-1.5 font-mulish text-primary text-center mt-3 mb-0"
+        class="md:text-lg leading-1.5 font-mulish text-primary text-center mt-3 mb-0"
       >
         Your information is protected by 256-bit SSL encryption
       </p>
@@ -48,7 +48,7 @@
         />
       </p>
       <p
-        class="md:text-xl font-mulish text-primary leading-1.5 text-center mt-2 mb-0"
+        class="md:text-lg font-mulish text-primary leading-1.5 text-center mt-2 mb-0"
       >
         14 Day money back guarantee
       </p>
@@ -64,7 +64,7 @@
   </div>
 
   <div class="mt-24 mb-16">
-    <h3 class="text-center font-medium font-geo text-2xl-2">
+    <h3 class="text-center font-medium font-geo text-3xl">
       Trusted by +10K enterprises worldwide
     </h3>
     <Marquee speed={30} class="pt-8" gap={"30px"}>

@@ -6,17 +6,13 @@ const config = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   safelist: ["dark"],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      // screens: {
-      //   "2xl": "1400px",
-      // },
-    },
     extend: {
       fontSize: {
-        lg2: "20px",
-        "2xl-2": "28px",
+        xl: "20px",
+        "2xl": "22px",
+        "3xl": "28px",
+        "4xl": "38px",
+        "5xl": "48px",
       },
       colors: {
         "secondary-dark": "#d21c5c",

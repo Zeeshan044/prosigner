@@ -51,7 +51,7 @@
 </script>
 
 <footer class="py-16 bg-primary text-white">
-  <div class="container mx-auto">
+  <div class="container mx-auto px-8">
     <!-- main parent div -->
     <div class="grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
       <!-- comapny intro and socials div -->
@@ -330,7 +330,7 @@
     <hr class="w-full border-gray-300 my-8" />
 
     <div class="flex flex-wrap justify-between gap-4">
-      <div class="flex flex-wrap items-center gap-12">
+      <div class="flex flex-wrap items-center gap-32">
         <div class="flex">
           <span class="pt-1">
             <svg
@@ -395,10 +395,13 @@
           </select>
         </div>
         <div>
-          <ul class="flex flex-wrap">
-            <li class="ms-1">© 2008-2024 WiseStamp |</li>
-            <li class="ms-1">Terms of Service |</li>
-            <li class="ms-1">Privacy Policy |</li>
+          <ul class="flex flex-wrap text-sm gap-2 font-semibold">
+            <li class="ms-1">© 2008-2024 WiseStamp</li>
+            <li>|</li>
+            <li class="ms-1">Terms of Service</li>
+            <li>|</li>
+            <li class="ms-1">Privacy Policy</li>
+            <li>|</li>
             <li class="ms-1">Security & Compliances</li>
           </ul>
         </div>

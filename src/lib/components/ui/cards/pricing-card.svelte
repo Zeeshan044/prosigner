@@ -22,7 +22,7 @@
     </div>
   {/if}
   <div class="p-8 flex flex-col">
-    <h3 class="mb-2 text-2xl text-start font-semibold font-geo">
+    <h3 class="mb-2 text-3xl text-start font-medium font-geo">
       {packageName}
     </h3>
 
@@ -45,8 +45,8 @@
       </div>
     {:else}
       <div class="flex justify-start items-center my-2">
-        <span class="mr-2 text-4xl font-semibold">{featurePrice}</span>
-        <span class="block">seat/month</span>
+        <span class="mr-2 text-4xl font-bold">{featurePrice}</span>
+        <span class="block leading-none ml-2">seat/<br />month</span>
       </div>
 
       <div class="mt-2">
@@ -64,13 +64,13 @@
     {#if enterprise}
       <a
         href="/"
-        class="text-secondary bg-white hover:bg-secondary duration-200 border border-secondary hover:text-white font-mulish rounded-lg px-5 py-3 my-4 text-center"
+        class="text-secondary text-lg bg-white hover:bg-secondary duration-100 border-2 border-secondary hover:text-white font-mulish rounded px-5 py-2 my-4 text-center font-semibold"
         >Contact Sales</a
       >
     {:else}
       <a
         href="/"
-        class="text-white bg-secondary hover:bg-secondary font-mulish border border-secondary rounded-lg px-5 py-3 my-4 text-center"
+        class="text-white text-lg bg-secondary hover:bg-secondary-dark duration-100 font-mulish border border-secondary rounded px-5 py-2 my-4 text-center"
         >Try for Free</a
       >
     {/if}

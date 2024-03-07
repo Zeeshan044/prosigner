@@ -4,6 +4,7 @@
   import Button from "../ui/button/button.svelte"
 
   import MegaMenu from "./mega-menu/mega-menu.svelte"
+  import { LINKS } from "./mega-menu/mega-menu"
 
   const MENU_ITEMS = ["Solutions", "Create", "Learn", "Company"]
 
@@ -12,8 +13,10 @@
   function handleMenuItemClick(value: string) {
     if (activeMenuItem === value) {
       activeMenuItem = null
+      document.body.style.overflow = "auto"
     } else {
       activeMenuItem = value
+      document.body.style.overflow = "hidden"
     }
   }
 </script>
@@ -23,26 +26,26 @@
     <div class="flex items-center justify-between md:px-6 py-3 xl:py-0">
       <!-- Left side content -->
       <div class="flex items-center">
-        <a href="/" class="mr-24">
+        <a href="/" class="mr-36">
           <LogoLarge />
         </a>
 
         <!-- Desktop menu -->
         <div class="items-center justify-between hidden xl:flex">
-          <ul class="flex text-primary/90 gap-2">
+          <ul class="flex text-primary/90 gap-2 items-center">
             {#each MENU_ITEMS as link}
               <li>
                 <a
                   href="/"
                   on:click={() => handleMenuItemClick(link)}
-                  class="py-7 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
+                  class="py-6 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
                 >
                   <span>{link}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="2"
+                    stroke-width="3"
                     stroke="currentColor"
                     class="w-3 h-3"
                   >
@@ -58,7 +61,7 @@
             <li>
               <a
                 href="/"
-                class="py-7 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
+                class="py-6 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
               >
                 <span>Partners</span>
               </a>
@@ -114,8 +117,8 @@
     </div>
   </div>
   {#if activeMenuItem}
-    <div transition:fade>
-      <MegaMenu />
+    <div transition:fade={{ duration: 200 }}>
+      <MegaMenu menu={LINKS[activeMenuItem].links} />
     </div>
   {/if}
 </nav>
@@ -125,7 +128,7 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
-    transition:fade
+    transition:fade={{ duration: 200 }}
     on:click={() => (activeMenuItem = null)}
     class="backdrop-blur-sm bg-black/55 fixed top-0 left-0 right-0 bottom-0 z-10"
   ></div>

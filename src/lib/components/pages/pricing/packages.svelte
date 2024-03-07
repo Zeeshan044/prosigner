@@ -10,14 +10,14 @@
 
 <section class="bg-white">
   <div class="ws-container">
-    <div class="my-12">
+    <div class="my-11">
       <label for="" class=" flex">
-        <span class="text-primary font-mulish py-1 font-semibold"
+        <span class="text-primary font-mulish py-1 font-bold"
           >Choose team size</span
         >
-        <div class=" ms-6 flex">
+        <div class="ms-6 flex">
           <select
-            class="relative w-full border border-gray-300 rounded-md py-1 px-2 font-semibold text-base leading-6 font-mulish text-primary"
+            class="relative text-sm w-full border border-gray-200 rounded-md py-1 px-2 font-bold leading-6 font-mulish text-primary"
             value="150"
           >
             {#each EMPLOYEES_COUNT as option}

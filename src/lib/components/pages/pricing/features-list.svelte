@@ -46,7 +46,7 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left h-16"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
               >Essential Features</th
             >
             <td
@@ -67,7 +67,7 @@
           {#each ESSENTIAL_FEATURES as feature}
             <tr>
               <th
-                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                class="w-1/3 h-[60px] p-4 text-left font-normal text-primary font-mulish pl-[40px]"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
@@ -92,7 +92,7 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left h-16"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
               >Control &amp; Efficiency</th
             >
             <td
@@ -113,7 +113,7 @@
           {#each CONTROL_EFFICIENCY as feature}
             <tr>
               <th
-                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
@@ -138,7 +138,7 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left h-16"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
               >Performance</th
             >
             <td
@@ -159,7 +159,7 @@
           {#each PERFORMANCE as feature}
             <tr>
               <th
-                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
@@ -184,7 +184,7 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left h-16"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
               >Admin &amp; Security</th
             >
             <td
@@ -205,7 +205,7 @@
           {#each ADMIN_SECURITY as feature}
             <tr>
               <th
-                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
@@ -230,7 +230,7 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left h-16"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
               >Support</th
             >
             <td
@@ -251,7 +251,7 @@
           {#each SUPPORT as feature}
             <tr>
               <th
-                class="w-1/3 h-4 p-4 text-left font-normal text-primary font-mulish"
+                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">

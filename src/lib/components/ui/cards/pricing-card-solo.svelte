@@ -8,10 +8,12 @@
 
 <div class="flex flex-col gap-y-5 rounded-lg p-7 shadow-custom bg-white">
   <div class="flex flex-wrap justify-between items-center">
-    <h3 class="text-2xl-2 font-medium font-geo text-primary leading-none">
+    <h3 class="text-3xl font-medium font-geo text-primary leading-none">
       {title}
     </h3>
-    <a href="/" class="text-lg font-bold text-secondary pr-8 hover:underline"
+    <a
+      href="/"
+      class="text-lg font-bold text-secondary min-w-[220px] text-center hover:underline"
       >Get started</a
     >
   </div>
