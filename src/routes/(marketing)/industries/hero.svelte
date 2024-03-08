@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="ws-container mt-8">
+<section class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full mt-8">
   <div class="md:grid grid-cols-2 items-center">
     <div class="flex flex-col gap-6 xl:gap-10 py-16">
       <div class="text-4xl xl:text-5xl text-primary font-normal font-geo">
@@ -7,7 +7,7 @@
         for Real Estate Agencies
       </div>
 
-      <div class="text-primary text-lg xl:text-xl font-mulish">
+      <div class="text-primary text-lg xl:text-xl">
         Get more leads and close more deals with a branded email signature for
         all your agents.
       </div>
@@ -35,7 +35,7 @@
     </div>
   </div>
 </section>
-<section class="ws-container flex mb-12">
+<section class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full flex mb-12">
   <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
     <div class="flex flex-row gap-4 items-center w-84">
       <div>
@@ -45,9 +45,7 @@
           alt=""
         />
       </div>
-      <div class="text-primary font-bold font-mulish">
-        Control your agents’ signatures
-      </div>
+      <div class="text-primary font-bold">Control your agents’ signatures</div>
     </div>
     <div class="flex flex-row gap-4 items-center w-84">
       <div>
@@ -57,9 +55,7 @@
           alt=""
         />
       </div>
-      <div class="text-primary font-bold font-mulish">
-        Keep your brand consistent
-      </div>
+      <div class="text-primary font-bold">Keep your brand consistent</div>
     </div>
     <div class="flex flex-row gap-4 items-center w-84">
       <div>
@@ -69,9 +65,7 @@
           alt=""
         />
       </div>
-      <div class="text-primary font-bold font-mulish">
-        Schedule meetings directly
-      </div>
+      <div class="text-primary font-bold">Schedule meetings directly</div>
     </div>
     <div class="flex flex-row gap-4 items-center w-84">
       <div>
@@ -81,9 +75,7 @@
           alt=""
         />
       </div>
-      <div class="text-primary font-bold font-mulish">
-        Promote your listings
-      </div>
+      <div class="text-primary font-bold">Promote your listings</div>
     </div>
   </div>
 </section>

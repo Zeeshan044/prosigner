@@ -8,7 +8,9 @@
 <!-- Trusted By -->
 
 <section class="py-24 bg-[#f8f9fb] mt-16">
-  <div class="ws-container flex flex-col justify-center gap-16">
+  <div
+    class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full flex flex-col justify-center gap-16"
+  >
     <div class="font-normal text-primary text-3xl text-center font-geo">
       <span class="font-bold">Trusted</span> by leading real estate agencies worldwide
     </div>

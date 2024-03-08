@@ -3,7 +3,7 @@
 </script>
 
 <section class="py-40">
-  <div class="ws-container">
+  <div class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full">
     <div class="text-4xl font-geo text-center">
       <span class="font-bold">It’s easy</span>
       to get started in 4 simple steps

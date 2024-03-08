@@ -7,8 +7,9 @@
     SUPPORT,
   } from "$lib/data/pricing/features"
   import { cn } from "$lib/utils"
-  import CheckCircle from "../../svg/check-circle.svelte"
 
+  import Icon from "$lib/components/Svelte-icon.svelte"
+  import { Icons } from "$lib/components/IconResources"
   let hidden = true
 
   function toggleHidden() {
@@ -17,28 +18,22 @@
 </script>
 
 <section class="pb-8 pt-24">
-  <div class="ws-container">
+  <div class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full">
     <div class="flex justify-center">
       <button
         on:click={toggleHidden}
         class="flex justify-center items-center gap-4"
       >
-        <h5 class="text-2xl font-bold cursor-pointer">
+        <h5 class="text-2xl font-medium cursor-pointer text-primary font-geo">
           Complete features list
         </h5>
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 12 7"
-          class="dropdown-trigger-icon transition-transform duration-300 ease-in-out cursor-pointer"
-          style="transform: rotate({!hidden ? '180deg' : '0deg'})"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="M5.60156 5.89844L1.10156 1.39844C0.867188 1.1875 0.867188 0.835938 1.10156 0.601562C1.3125 0.390625 1.66406 0.390625 1.89844 0.601562L6 4.72656L10.1016 0.625C10.3125 0.390625 10.6641 0.390625 10.8984 0.625C11.1094 0.835938 11.1094 1.1875 10.8984 1.39844L6.375 5.89844C6.16406 6.13281 5.8125 6.13281 5.60156 5.89844Z"
-            fill="currentColor"
-          ></path></svg
-        >
+        <Icon
+          data={Icons.selectArrow}
+          class="w-5 h-4 ease-in-out duration-200 text-primary  {hidden
+            ? 'rotate-0'
+            : 'rotate-180'}"
+          stroke="transparent"
+        />
       </button>
     </div>
     <div class="mt-8">
@@ -46,19 +41,19 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-5"
               >Essential Features</th
             >
             <td
-              class="h-16 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-16 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Basic</td
             >
             <td
-              class="h-16 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-16 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Plus</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Enterprise</td
             >
           </tr>
@@ -66,23 +61,34 @@
         <tbody>
           {#each ESSENTIAL_FEATURES as feature}
             <tr>
-              <th
-                class="w-1/3 h-[60px] p-4 text-left font-normal text-primary font-mulish pl-[40px]"
+              <th class="w-1/3 h-10 p-4 pl-5 text-left font-normal text-primary"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
                 {#if feature?.basic}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.plus}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.enterprise}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
             </tr>
@@ -92,19 +98,19 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-5"
               >Control &amp; Efficiency</th
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Basic</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Plus</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Enterprise</td
             >
           </tr>
@@ -112,23 +118,34 @@
         <tbody>
           {#each CONTROL_EFFICIENCY as feature}
             <tr>
-              <th
-                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
+              <th class="w-1/3 h-10 p-4 pl-5 text-left font-normal text-primary"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
                 {#if feature?.basic}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.plus}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.enterprise}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
             </tr>
@@ -138,19 +155,19 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-5"
               >Performance</th
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Basic</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Plus</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Enterprise</td
             >
           </tr>
@@ -158,23 +175,34 @@
         <tbody>
           {#each PERFORMANCE as feature}
             <tr>
-              <th
-                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
+              <th class="w-1/3 h-10 p-4 pl-5 text-left font-normal text-primary"
                 >{feature.title}</th
               >
-              <td class="w-1/4 p-4">
+              <td class="w-1/4 p-4 text-center">
                 {#if feature?.basic}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.plus}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.enterprise}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
             </tr>
@@ -184,19 +212,19 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-5"
               >Admin &amp; Security</th
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Basic</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Plus</td
             >
             <td
-              class="h-4 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-4 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Enterprise</td
             >
           </tr>
@@ -204,23 +232,34 @@
         <tbody>
           {#each ADMIN_SECURITY as feature}
             <tr>
-              <th
-                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
+              <th class="w-1/3 h-10 p-4 pl-5 text-left font-normal text-primary"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
                 {#if feature?.basic}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.plus}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
               <td class="w-1/4 p-4">
                 {#if feature?.enterprise}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
             </tr>
@@ -230,19 +269,19 @@
         <thead>
           <tr>
             <th
-              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-[40px]"
+              class="font-bold tracking-wider border-b border-gray-300 uppercase text-secondary w-1/3 p-4 text-left pl-5"
               >Support</th
             >
             <td
-              class="h-16 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-16 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Basic</td
             >
             <td
-              class="h-16 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-16 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Plus</td
             >
             <td
-              class="h-16 w-1/4 p-4 text-center border-b border-gray-300 text-base font-bold leading-6"
+              class="h-16 w-1/4 p-4 text-primary text-center border-b border-gray-300 text-base font-bold leading-6"
               >Enterprise</td
             >
           </tr>
@@ -250,23 +289,38 @@
         <tbody>
           {#each SUPPORT as feature}
             <tr>
-              <th
-                class="w-1/3 h-[60px] p-4 pl-[40px] text-left font-normal text-primary font-mulish"
+              <th class="w-1/3 h-10 p-4 pl-5 text-left font-normal text-primary"
                 >{feature.title}</th
               >
               <td class="w-1/4 p-4">
                 {#if feature?.basic}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
                 {/if}
               </td>
-              <td class="w-1/4 p-4">
+              <td class="w-1/4 p-4 text-center text-primary">
                 {#if feature?.plus}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
+                {:else if feature?.plusValue}
+                  {feature?.value}
                 {/if}
               </td>
-              <td class="w-1/4 p-4">
+              <td class="w-1/4 p-4 text-center text-primary">
                 {#if feature?.enterprise}
-                  <CheckCircle />
+                  <Icon
+                    data={Icons.checkCircle}
+                    class="w-6 h-6 mx-auto text-[#33CC9D]"
+                    stroke="transparent"
+                  />
+                {:else}
+                  {feature?.entrValue}
                 {/if}
               </td>
             </tr>

@@ -14,7 +14,7 @@
   import Similarweb from "$lib/assets/svg/similarweb.svg"
 </script>
 
-<section class="mt-24 ws-container font-geo">
+<section class="mt-24 max-w-screen-wrap px-3 xl:px-5 mx-auto w-full font-geo">
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
     <div class="p-8 px-15">
       <p class="font-geo">
@@ -26,14 +26,10 @@
           height="90"
         />
       </p>
-      <p
-        class="text-lg text-primary leading-1.5 text-center mt-3 mb-0 font-mulish"
-      >
+      <p class="text-lg text-primary leading-1.5 text-center mt-3 mb-0">
         <strong>SSL SECURE PAYMENT</strong>
       </p>
-      <p
-        class="md:text-lg leading-1.5 font-mulish text-primary text-center mt-3 mb-0"
-      >
+      <p class="md:text-lg leading-1.5 text-primary text-center mt-3 mb-0">
         Your information is protected by 256-bit SSL encryption
       </p>
     </div>
@@ -47,9 +43,7 @@
           height="180"
         />
       </p>
-      <p
-        class="md:text-lg font-mulish text-primary leading-1.5 text-center mt-2 mb-0"
-      >
+      <p class="md:text-lg text-primary leading-1.5 text-center mt-2 mb-0">
         14 Day money back guarantee
       </p>
     </div>
@@ -63,8 +57,8 @@
     </div>
   </div>
 
-  <div class="mt-24 mb-16">
-    <h3 class="text-center font-medium font-geo text-3xl">
+  <div class="py-16">
+    <h3 class="text-center font-medium font-geo text-3xl text-primary">
       Trusted by +10K enterprises worldwide
     </h3>
     <Marquee speed={30} class="pt-8" gap={"30px"}>
