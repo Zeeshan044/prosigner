@@ -6,18 +6,22 @@
 
   import MegaMenu from "./mega-menu/mega-menu.svelte"
   import { LINKS } from "./mega-menu/mega-menu"
+  import MobileNav from "./mobile-nav.svelte"
 
   const MENU_ITEMS = ["Solutions", "Create", "Learn", "Company"]
 
   let activeMenuItem: string | null = null
+  let showMobileMenu = false
 
   function handleMenuItemClick(value: string) {
-    if (activeMenuItem === value) {
-      activeMenuItem = null
-      document.body.style.overflow = "auto"
-    } else {
-      activeMenuItem = value
-      document.body.style.overflow = "hidden"
+    switch (value) {
+      case activeMenuItem:
+        activeMenuItem = null
+        document.body.style.overflow = "auto"
+        break
+      default:
+        activeMenuItem = value
+        document.body.style.overflow = "hidden"
     }
   }
 </script>
@@ -40,8 +44,7 @@
           <ul class="flex text-primary/90 gap-2 items-center">
             {#each MENU_ITEMS as link}
               <li>
-                <a
-                  href="/"
+                <button
                   on:click={() => handleMenuItemClick(link)}
                   class="py-6 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
                 >
@@ -51,7 +54,7 @@
                     class="w-3 h-3  "
                     stroke="transparent"
                   />
-                </a>
+                </button>
               </li>
             {/each}
             <li>
@@ -92,6 +95,15 @@
         class="block xl:hidden"
         aria-controls="navbar-sticky"
         aria-expanded="false"
+        on:click={() => {
+          if (showMobileMenu) {
+            showMobileMenu = false
+            document.body.style.overflow = "auto"
+          } else {
+            showMobileMenu = true
+            document.body.style.overflow = "hidden"
+          }
+        }}
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -114,8 +126,15 @@
   </div>
   {#if activeMenuItem}
     <div transition:fade={{ duration: 200 }}>
-      <MegaMenu menu={LINKS[activeMenuItem].links} />
+      <MegaMenu
+        handleClickOutside={() => handleMenuItemClick(null)}
+        menu={LINKS[activeMenuItem].links}
+      />
     </div>
+  {/if}
+
+  {#if showMobileMenu}
+    <MobileNav />
   {/if}
 </nav>
 
@@ -125,7 +144,6 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div
     transition:fade={{ duration: 200 }}
-    on:click={() => (activeMenuItem = null)}
     class="backdrop-blur-sm bg-black/55 fixed top-0 left-0 right-0 bottom-0 z-10"
   ></div>
 {/if}
