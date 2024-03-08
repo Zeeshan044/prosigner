@@ -1,11 +1,15 @@
 <script lang="ts">
   export let menu: any
+  export let handleClickOutside: any
   import Icon from "$lib/components/Svelte-icon.svelte"
   import { Icons } from "$lib/components/IconResources"
+  import { clickOutside } from "../../../../utils"
 </script>
 
 <!-- Menu -->
 <div
+  use:clickOutside
+  on:click_outside={handleClickOutside}
   class="bg-[#f8f9fb] absolute top-full left-0 right-0 border-t border-[#f8f9fb]"
 >
   <div class="container mx-auto grid grid-cols-4 gap-8 px-8">
