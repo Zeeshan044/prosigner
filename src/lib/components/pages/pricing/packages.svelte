@@ -11,7 +11,9 @@
 </script>
 
 <section class="bg-white pt-10">
-  <div class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full space-y-16">
+  <div
+    class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full space-y-5 xl:space-y-16"
+  >
     <div class="flex gap-5">
       <label for="" class="flex text-primary py-1 font-bold whitespace-nowrap"
         >Choose team size
@@ -32,39 +34,40 @@
         </select>
       </div>
     </div>
-
-    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-      <PricingCard
-        listHeading=""
-        tooltip="Manage email signatures for every employee from a central dashboard."
-        packageName="Basic"
-        featurePrice="$1.5"
-        totalPrice="$225"
-        description="Create professional and consistent signatures for your organization."
-        featureList={PRICING_FEATURES_1}
-      />
-      <div class="mt-6 md:mt-0">
+    <div class="overflow-auto xl:overflow-visible max-w-full p-5 xl:p-0">
+      <div class="grid grid-cols-3 gap-6 min-w-[1024px]">
         <PricingCard
-          listHeading="All the benefits of Basic and:"
+          listHeading=""
           tooltip="Manage email signatures for every employee from a central dashboard."
-          packageName="Plus"
+          packageName="Basic"
+          featurePrice="$1.5"
+          totalPrice="$225"
+          description="Create professional and consistent signatures for your organization."
+          featureList={PRICING_FEATURES_1}
+        />
+        <div class="mt-6 md:mt-0">
+          <PricingCard
+            listHeading="All the benefits of Basic and:"
+            tooltip="Manage email signatures for every employee from a central dashboard."
+            packageName="Plus"
+            featurePrice="$1.8"
+            totalPrice="$270"
+            description="Get advanced features & analytics for your signatures."
+            featureList={PRICING_FEATURES_2}
+            recommended
+          />
+        </div>
+        <PricingCard
+          listHeading="All the benefits of Plus and:"
+          tooltip="Manage email signatures for every employee from a central dashboard."
+          packageName="Enterprise"
           featurePrice="$1.8"
           totalPrice="$270"
-          description="Get advanced features & analytics for your signatures."
-          featureList={PRICING_FEATURES_2}
-          recommended
+          description="Securely manage your signatures at the highest scale."
+          featureList={PRICING_FEATURES_3}
+          enterprise
         />
       </div>
-      <PricingCard
-        listHeading="All the benefits of Plus and:"
-        tooltip="Manage email signatures for every employee from a central dashboard."
-        packageName="Enterprise"
-        featurePrice="$1.8"
-        totalPrice="$270"
-        description="Securely manage your signatures at the highest scale."
-        featureList={PRICING_FEATURES_3}
-        enterprise
-      />
     </div>
   </div>
 </section>
