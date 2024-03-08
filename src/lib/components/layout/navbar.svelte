@@ -11,13 +11,16 @@
 
   let activeMenuItem: string | null = null
 
-  function handleMenuItemClick(value: string) {
-    if (activeMenuItem === value) {
-      activeMenuItem = null
-      document.body.style.overflow = "auto"
-    } else {
-      activeMenuItem = value
-      document.body.style.overflow = "hidden"
+  function handleMenuItemClick(value: string | null) {
+    switch (value) {
+      case activeMenuItem:
+      case null:
+        activeMenuItem = null
+        document.body.style.overflow = "auto"
+        break
+      default:
+        activeMenuItem = value
+        document.body.style.overflow = "hidden"
     }
   }
 </script>
