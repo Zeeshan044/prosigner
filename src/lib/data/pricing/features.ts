@@ -179,11 +179,20 @@ export const SUPPORT = [
   { title: "Email support", basic: true, plus: true, enterprise: true },
   {
     title: "Dedicated onboarding specialist",
-    plus: true,
-    enterprise: true,
+    plus: false,
+    plusValue:true, 
+    value:'for 50+ seats',
+    enterprise: false,
+    entrValue:'for 50+ seats'
+   
   },
   {
     title: "Dedicated customer success manager",
-    enterprise: true,
+    plus: false,
+    plusValue:false, 
+    value:'for 50+ seats',
+    enterprise: false,
+    entrValue:'for 200+ seats'
+
   },
 ]

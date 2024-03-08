@@ -1,5 +1,7 @@
 <script lang="ts">
   import "../app.css"
+  import "$lib/assets/fonts/geomanist-fonts.css"
+  import "@fontsource-variable/mulish"
   import { navigating } from "$app/stores"
   import { expoOut } from "svelte/easing"
   import { slide } from "svelte/transition"

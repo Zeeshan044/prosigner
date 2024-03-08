@@ -1,11 +1,13 @@
-<section class="ws-container mx-auto mt-12 mb-24">
+<section
+  class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full mx-auto mt-12 mb-24"
+>
   <!-- Grid 1 -->
   <div class="grid md:grid-cols-9 items-center gap-x-20 gap-y-6">
     <div class="flex flex-col gap-4 col-span-5">
       <div class="text-4xl font-normal text-primary font-geo">
         Your new,<span class="font-bold"> targeted sales</span> channel
       </div>
-      <div class="text-lg text-primary font-normal text-left font-mulish">
+      <div class="text-lg text-primary font-normal text-left">
         <p class="max-w-2xl text-lg">
           Add a banner or an image gallery to showcase your listings at the
           bottom of every agent’s signature to grab prospects’ attention.
@@ -38,7 +40,7 @@
       <div class="text-4xl font-normal text-primary font-geo">
         Keep your prospects <span class="font-bold">engaged</span>
       </div>
-      <div class="text-lg text-primary font-normal text-left font-mulish">
+      <div class="text-lg text-primary font-normal text-left">
         <p class="max-w-2xl text-lg">
           Showcase upcoming open houses to increase attendance, promote virtual
           tours and video walkthroughs, and add an online scheduler to every
@@ -55,7 +57,7 @@
       <div class="text-4xl font-normal text-primary font-geo">
         Build you prospects’ <span class="font-bold">trust</span>
       </div>
-      <div class="text-lg text-primary font-normal text-left font-mulish">
+      <div class="text-lg text-primary font-normal text-left">
         <ul class="flex flex-col gap-4">
           <li class="flex items-center gap-4 font-bold">
             <img

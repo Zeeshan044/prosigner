@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from "svelte/transition"
-  import LogoLarge from "../svg/logo-large.svelte"
+  import Icon from "$lib/components/Svelte-icon.svelte"
+  import { Icons } from "$lib/components/IconResources"
   import Button from "../ui/button/button.svelte"
 
   import MegaMenu from "./mega-menu/mega-menu.svelte"
@@ -22,16 +23,20 @@
 </script>
 
 <nav class="bg-white shadow-sm relative z-50">
-  <div class="container mx-auto">
+  <div class="max-w-screen-2xl px-3 mx-auto w-full">
     <div class="flex items-center justify-between md:px-6 py-3 xl:py-0">
       <!-- Left side content -->
-      <div class="flex items-center">
-        <a href="/" class="mr-36">
-          <LogoLarge />
+      <div class="flex items-center flex-1">
+        <a href="/">
+          <Icon
+            data={Icons.logoLarge}
+            class="w-24 h-14 text-primary relative top-1"
+            stroke="transparent"
+          />
         </a>
 
         <!-- Desktop menu -->
-        <div class="items-center justify-between hidden xl:flex">
+        <div class="items-center justify-between hidden xl:flex pl-36">
           <ul class="flex text-primary/90 gap-2 items-center">
             {#each MENU_ITEMS as link}
               <li>
@@ -41,20 +46,11 @@
                   class="py-6 px-4 flex items-center gap-2 hover:text-secondary duration-100 border-t-2 border-transparent hover:border-secondary"
                 >
                   <span>{link}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="3"
-                    stroke="currentColor"
-                    class="w-3 h-3"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
+                  <Icon
+                    data={Icons.selectArrow}
+                    class="w-3 h-3  "
+                    stroke="transparent"
+                  />
                 </a>
               </li>
             {/each}

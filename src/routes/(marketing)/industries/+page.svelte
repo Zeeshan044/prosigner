@@ -12,12 +12,12 @@
 <Features1 />
 
 <section class="bg-[#f8f9fb] py-24">
-  <div class="ws-container">
+  <div class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full">
     <img
       src="https://www.wisestamp.com/wp-content/uploads/2023/06/AvenuesNY-quote-one-about-WiseStamp-image-min.png"
       alt=""
     />
-    <a href="" class="inline-block text-secondary text-lg mt-16">
+    <a href="/#" class="inline-block text-secondary text-lg mt-16">
       Read Jane’s full story
     </a>
   </div>
@@ -25,13 +25,13 @@
 
 <Features2 />
 
-<section class="ws-container mt-12 mb-24">
+<section class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full mt-12 mb-24">
   <div class="flex flex-col items-center">
     <div class="text-4xl font-normal text-center text-primary font-geo">
       <span class="font-bold">Easy onboarding </span>
       makes for high adoption
     </div>
-    <div class="text-lg text-primary font-normal text-center font-mulish mt-4">
+    <div class="text-lg text-primary font-normal text-center mt-4">
       <p class="max-w-4xl">
         To make the most of your consistent branding you need to have every
         agent on board. Research shows that manual email signature management

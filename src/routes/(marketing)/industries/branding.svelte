@@ -4,7 +4,7 @@
       <span class="font-bold text-center">Control your branding</span>
       across all email signatures
     </div>
-    <div class="text-lg text-primary font-normal text-center font-mulish mt-4">
+    <div class="text-lg text-primary font-normal text-center mt-4">
       <p class="max-w-4xl text-center">
         Your emails are your most powerful marketing channel. Agents send
         thousands of emails to interact with clients daily. Increase brand
