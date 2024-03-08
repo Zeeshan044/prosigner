@@ -85,7 +85,7 @@
   ]
 </script>
 
-<footer class="py-16 bg-primary text-white">
+<footer class="py-5 xl:py-16 bg-primary text-white">
   <div class="max-w-screen-wrap px-3 xl:px-5 mx-auto w-full">
     <!-- main parent div -->
     <div class="flex flex-col lg:grid lg:grid-cols-12 gap-y-8 gap-x-4">
@@ -127,7 +127,9 @@
           {/each}
         </div>
       </div>
-      <div class="grid md:grid-cols-8 lg:grid-cols-10 gap-4 lg:col-span-9">
+      <div
+        class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-10 gap-4 lg:col-span-9"
+      >
         <!-- Column 1 -->
         <div class="col-span-2">
           <h2 class="h4 font-bold text-lg">Product</h2>
@@ -208,19 +210,19 @@
 
     <!-- address  -->
     <div
-      class="flex flex-wrap items-center justify-between gap-4 mt-16 text-sm"
+      class="flex flex-wrap items-center justify-between gap-4 mt-5 xl:mt-16 text-sm"
     >
       <div>
         <h6 class="my-auto py-1">
           Address 500 108th Ave NE, Bellevue, WA 98004, USA
         </h6>
       </div>
-      <div class="flex flex-wrap md:justify-end">
+      <div class="flex flex-wrap md:justify-end gap-2">
         <h6 class="inline my-auto">
           Get your company a professional email signature
         </h6>
         <button
-          class="rounded-full bg-secondary hover:bg-secondary-dark ms-2 text-white px-4 py-1 font-semibold"
+          class="rounded-full bg-secondary hover:bg-secondary-dark text-white px-4 py-1 font-semibold"
           >Start Now</button
         >
       </div>
@@ -228,7 +230,7 @@
     <hr class="w-full border-gray-300 my-8" />
 
     <div class="flex flex-wrap justify-between gap-4">
-      <div class="flex flex-wrap items-center gap-32">
+      <div class="flex flex-wrap items-center gap-y-4 gap-x-32">
         <div class="flex">
           <span class="pt-1">
             <svg
