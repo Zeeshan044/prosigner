@@ -13,9 +13,10 @@
   let activeMenuItem: string | null = null
   let showMobileMenu = false
 
-  function handleMenuItemClick(value: string) {
+  function handleMenuItemClick(value: string | null) {
     switch (value) {
       case activeMenuItem:
+      case null:
         activeMenuItem = null
         document.body.style.overflow = "auto"
         break
